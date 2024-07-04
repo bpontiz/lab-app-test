@@ -5,7 +5,7 @@ let fs =  require("fs");
 let sequelize =  require("sequelize");
 const router = require("./router/router");
 
-const port = 8080;
+const port = 8081;
 
 const app = express();
 
@@ -16,9 +16,14 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 app.get('/', (_req, res) => {
-    res.status(304).sendFile(path.join(__dirname, "index.html"));
+    res.status(200).sendFile(path.join(__dirname, "./index.html"));
 });
 
-app.use('/data', router);
+app.use('/users', router);
 
-app.listen(port, () => console.log(`Server is listening on http://localhost:${port}`));
+app.get('/*', (req, res) => {
+  const clientEndpoint = req.params;
+  res.status(404).send(`<h2>404. <h3 style="color: red; display: inline">/${clientEndpoint[0]}</h3> Resource not found.</h2>`);
+});
+
+app.listen(port, () => console.log(`Server is listening on http://localhost:${port}/`));
