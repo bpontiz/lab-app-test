@@ -4,8 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm run migrations && node --watch server.js",
-    "initialize": "sudo docker compose -f ../docker-compose.yaml up -d && sudo docker start db_bootcamp2",
+    "start": "node --watch server.js",
+    "compose": "sudo docker compose -f ../docker-compose.yaml up -d && sudo docker start db_bootcamp2",
     "migrations": "npx sequelize-cli db:migrate --config db/config/config.js"
   },
   "keywords": [],
