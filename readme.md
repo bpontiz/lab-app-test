@@ -1,10 +1,10 @@
 # Bootcamp2.0 v0.1 - Lab App
 
-## 1 - Entrar a app/ e instalar dependencias.
-cd ./app && npm install
+## 1 - Crear los contenedores de Docker del proyecto.
+cd ./app && npm run compose
 
-## 2 - Crear los contenedores de Docker del proyecto.
-npm run compose
+## 2 - Entrar a app/ e instalar dependencias.
+npm install
 
 ## 3 - Inicializar el servidor.
 npm run start

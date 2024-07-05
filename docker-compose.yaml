@@ -1,6 +1,11 @@
 services:
+  node:
+    image: node:22.4
+    container_name: node
+    ports:
+      - 8081:80
   db_bootcamp2:
-    image: mysql:latest
+    image: mysql:8.4.1
     container_name: db_bootcamp2
     ports:
       - 3306:3306
