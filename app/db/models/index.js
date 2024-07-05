@@ -12,7 +12,6 @@ let sequelize = new Sequelize(`${process.env.MYSQL_DATABASE}`, `${process.env.MY
 (async function auth() {
     try {
         await sequelize.authenticate();
-        await sequelize.sync( {force: true} );
         console.log('All models were synchronized successfully.');
         console.log('Connection has been established successfully.');
       } catch (error) {
@@ -40,6 +39,9 @@ const User = sequelize.define(
             defaultValue: 'doomyEmail',
         },
     },
+    {
+        timestamps: true,
+    }
 );
 
 module.exports = User;
