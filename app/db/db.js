@@ -2,7 +2,14 @@ const User = require('./model');
 
 async function getUsers() {
     try {
-        return await User.findAll();
+        const getAll = await User.findAll(
+            {
+                raw: true,
+                nest: true,
+            }
+        );
+        console.log("Users:", getAll);
+        return getAll;
     }
     catch (err) {
         const errorMessage = "Error after trying to get users from db.\n";
