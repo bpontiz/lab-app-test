@@ -12,7 +12,7 @@ async function getUsers() {
         return getAll;
     }
     catch (err) {
-        const errorMessage = "Error after trying to get users from db.\n";
+        const errorMessage = "Error after trying to get users from db.";
         console.log(`${errorMessage}`,err);
         return errorMessage;
     }
@@ -23,7 +23,7 @@ async function saveUser(userToBeSaved) {
         return await User.create(userToBeSaved);
     }
     catch (err) {
-        const errorMessage = "Error after trying to save new user in db.\n";
+        const errorMessage = "Error after trying to save new user in db.";
         console.log(`${errorMessage}`,err);
         return errorMessage;
     }
