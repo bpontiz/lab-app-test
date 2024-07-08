@@ -7,7 +7,7 @@ module.exports = {
     username: process.env.MYSQL_USER || "nodebootcamp2",
     password: process.env.MYSQL_PASSWORD || "bootsilicecamp101",
     database: process.env.MYSQL_DATABASE || "db_bootcamp2",
-    host: process.env.MYSQL_HOST || "localhost",
+    host: process.env.MYSQL_HOST || "db_bootcamp2",
     port: process.env.MYSQL_PORT || "3306",
     dialect: "mysql"
   },
