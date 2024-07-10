@@ -1,6 +1,6 @@
 services:
   node:
-    build: .
+    image: brunopontiz/bootcamp2.0:0.1
     container_name: node
     ports:
       - 8081:8081
