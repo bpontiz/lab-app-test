@@ -1,12 +1,17 @@
 # Bootcamp2.0 v0.1 - Lab App
 
-## 1 - Ejecutar la construcción (build) del proyecto.
+## 1 - Crear un script .env.
+sudo vim ./app/.env
+
+Copiar las variables de .sample.env en .env y asignar los valores correspondientes.
+
+## 2 - Ejecutar la construcción (build) del proyecto.
 sudo docker compose up --build
 
-## 2 - Visitar en el navegador:
+## 3 - Visitar en el navegador:
 http://localhost:8081
 
-## 3 - Requerir la siguiente URI:
+## 4 - Consumir la siguiente URI:
 /users
 
 Allí podrá verse la cantidad de usuarios guardados en la base de datos. Si no tiene usuarios, verás un par de corchetes "[]" indicando que la tabla Users está vacía.
