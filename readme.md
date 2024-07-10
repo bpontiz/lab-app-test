@@ -1,9 +1,7 @@
 # Bootcamp2.0 v0.1 - Lab App
 
-## 1 - Crear un script .env.
-sudo vim ./app/.env
-
-Copiar las variables de .sample.env en .env y asignar los valores correspondientes.
+## 1 - Copiar las variables de .sample.env en .env y asignar los valores correspondientes.
+sudo cp ./app/.sample.env ./app/.env
 
 ## 2 - Ejecutar la construcción (build) del proyecto.
 sudo docker compose up --build
