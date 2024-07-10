@@ -13,12 +13,6 @@ services:
     ports:
       - 3306:3306
     env_file: ./app/.env
-    environment:
-      - MYSQL_ROOT_PASSWORD=bootsilicecamp101
-      - MYSQL_DATABASE=db_bootcamp2
-      - MYSQL_USER=nodebootcamp2
-      - MYSQL_PASSWORD=bootsilicecamp101
-      - MYSQL_HOST=localhost
     volumes:
       - mysql-data:/var/lib/mysql
 
