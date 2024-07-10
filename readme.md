@@ -4,7 +4,7 @@
 sudo cp ./app/.sample.env ./app/.env
 
 ## 2 - Ejecutar la construcción (build) del proyecto.
-sudo docker compose up --build
+sudo docker compose -f docker-compose.yaml up
 
 ## 3 - Visitar en el navegador:
 http://localhost:8081
